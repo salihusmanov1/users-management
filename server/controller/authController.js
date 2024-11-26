@@ -50,7 +50,7 @@ class AuthController {
       }
       const isPasswordValid = await bcrypt.compare(password, user.password);
       if (!isPasswordValid) {
-        return res.status(401).json({ message: 'Invalid email or password. Please try again.' });
+        return res.status(401).json({ message: 'Invalid password. Please try again.' });
       }
       if (user.is_blocked) {
         return res.status(403).json({ message: 'Your account is blocked. Please contact support.' });

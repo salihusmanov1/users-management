@@ -20,6 +20,12 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 import { useUsersContext } from "@/hooks/useUsersContext";
 
@@ -77,28 +83,57 @@ export function DataTable({ columns }) {
     <div>
       <div className="flex flex-wrap justify-between my-2">
         <div className="flex items-center space-x-2 ">
-          <Button
-            className="text-white bg-indigo-500 hover:bg-indigo-400"
-            onClick={block}
-            disabled={!selectedUsers.length}
-          >
-            <Icon icon="lucide:lock" />
-            Block
-          </Button>
-          <Button
-            className="text-white bg-indigo-500 hover:bg-indigo-400"
-            onClick={unblock}
-            disabled={!selectedUsers.length}
-          >
-            <Icon icon="lucide:lock-open" />
-          </Button>
-          <Button
-            className="text-white bg-red-500 hover:bg-red-400"
-            disabled={!selectedUsers.length}
-            onClick={remove}
-          >
-            <Icon icon="lucide:trash" />
-          </Button>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger>
+                <Button
+                  className="text-white bg-indigo-500 hover:bg-indigo-400"
+                  onClick={block}
+                  disabled={!selectedUsers.length}
+                >
+                  <Icon icon="lucide:lock" />
+                  Block
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Block user</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger>
+                <Button
+                  className="text-white bg-indigo-500 hover:bg-indigo-400"
+                  onClick={unblock}
+                  disabled={!selectedUsers.length}
+                >
+                  <Icon icon="lucide:lock-open" />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Unblock user</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger>
+                <Button
+                  className="text-white bg-red-500 hover:bg-red-400"
+                  disabled={!selectedUsers.length}
+                  onClick={remove}
+                >
+                  <Icon icon="lucide:trash" />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Delete user</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </div>
 
         <Input

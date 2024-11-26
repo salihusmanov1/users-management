@@ -40,7 +40,7 @@ const Login = () => {
 
   return (
     <div className="h-full">
-      <div className="h-full content-center justify-items-center mx-4">
+      <div className="h-full grid content-center justify-items-center mx-4">
         <Card className="w-1/2 min-w-64">
           <form onSubmit={handleSubmit(onSubmit)}>
             <CardHeader>

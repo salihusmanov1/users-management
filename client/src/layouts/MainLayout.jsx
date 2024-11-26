@@ -10,7 +10,6 @@ import {
 import { Icon } from "@iconify/react";
 import { useLogout } from "@/hooks/useLogout";
 import { useAuthContext } from "@/hooks/useAuthContext";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const MainLayout = () => {
   const { logout } = useLogout();

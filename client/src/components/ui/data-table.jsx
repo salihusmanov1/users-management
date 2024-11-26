@@ -78,7 +78,7 @@ export function DataTable({ columns }) {
       <div className="flex flex-wrap justify-between my-2">
         <div className="flex items-center space-x-2 ">
           <Button
-            className="text-white bg-indigo-400 hover:bg-indigo-500"
+            className="text-white bg-indigo-500 hover:bg-indigo-400"
             onClick={block}
             disabled={!selectedUsers.length}
           >
@@ -86,14 +86,14 @@ export function DataTable({ columns }) {
             Block
           </Button>
           <Button
-            className="text-white bg-indigo-400 hover:bg-indigo-500"
+            className="text-white bg-indigo-500 hover:bg-indigo-400"
             onClick={unblock}
             disabled={!selectedUsers.length}
           >
             <Icon icon="lucide:lock-open" />
           </Button>
           <Button
-            className="text-white bg-red-400 hover:bg-red-500"
+            className="text-white bg-red-500 hover:bg-red-400"
             disabled={!selectedUsers.length}
             onClick={remove}
           >

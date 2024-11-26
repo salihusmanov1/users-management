@@ -15,6 +15,7 @@ const corsConfig = {
   origin: 'https://users-management-client.onrender.com',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: false,
   preflightContinue: false,
   optionsSuccessStatus: 204,
 };

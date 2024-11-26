@@ -55,7 +55,7 @@ module.exports = (sequelize, DataTypes) => {
     last_seen: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: new Date()
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
     },
     is_blocked: {
       type: DataTypes.INTEGER,

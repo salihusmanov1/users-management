@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       validate: {
         len: {
-          args: [3, 20],
-          msg: 'Name must be between 3 and 20 characters long.'
+          args: [1],
+          msg: 'Name field is required'
         },
       },
     },

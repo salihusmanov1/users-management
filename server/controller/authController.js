@@ -19,10 +19,9 @@ class AuthController {
           email: newUser.email,
           token: generateAccessToken(newUser.id)
         },
-
       });
     } catch (error) {
-      if (error.name === 'SequelizeValidationError' || error.name === "SequelizeUniqueConstraintError") {
+      if (["SequelizeValidationError", "SequelizeUniqueConstraintError"].includes(error.name)) {
         const validationErrors = error.errors.map((err) => ({
           field: err.path,
           message: err.message,

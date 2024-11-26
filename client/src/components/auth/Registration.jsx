@@ -44,7 +44,7 @@ const Registration = () => {
   const [isView, setIsView] = useState(false);
   return (
     <div className="h-full">
-      <div className="h-full content-center justify-items-center">
+      <div className="h-full grid content-center justify-items-center">
         <Card className="w-1/2 min-w-64">
           <form onSubmit={handleSubmit(onSubmit)}>
             <CardHeader>

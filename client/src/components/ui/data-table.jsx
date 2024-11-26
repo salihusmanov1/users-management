@@ -96,7 +96,7 @@ export function DataTable({ columns }) {
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
-                <p>Block user</p>
+                <p>Block</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -113,7 +113,7 @@ export function DataTable({ columns }) {
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
-                <p>Unblock user</p>
+                <p>Unblock</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -130,7 +130,7 @@ export function DataTable({ columns }) {
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
-                <p>Delete user</p>
+                <p>Delete</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
